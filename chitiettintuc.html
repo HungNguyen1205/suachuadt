@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sửa chữa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body>
+    <a id="button" class=""></a>
+    <div id="wrapper">
+        <div class="mfp-bg" id="overplay"></div>
+        <div id="main-menu" class="mobile-sidebar">    
+            <div class="sidebar-menu">
+                <ul class="nav nav-sidebar  nav-vertical nav-uppercase">
+                    <li class="header-search-form search-form html relative has-icon">
+                        <div class="header-search-form-wrapper">
+                            <div class="searchform-wrapper ux-search-box relative is-normal">
+                                <form role="search" method="get" class="searchform" action="">
+                                    <div class="flex-row relative">
+                                        <div class="flex-col flex-grow">
+                                            <label class="screen-reader-text" for="">Tìm kiếm:</label>
+                                            <input type="search" class="search-field mb-0" placeholder="Tìm kiếm…" value="" name="s" autocomplete="off">
+                                            <input type="hidden" name="post_type" value="product">
+                                        </div>
+                                        <div class="flex-col">
+                                            <button type="submit" value="Tìm kiếm" class="ux-search-submit submit-button secondary button icon mb-0"> <i class="fas fa-search"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="live-search-results text-left z-top">
+                                        <div class="autocomplete-suggestions" style="position: absolute; display: none; max-height: 300px; z-index: 9999;"></div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">Trang chủ</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">Giới Thiệu</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">DỊCH VỤ SỬA CHỮA</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">Tin Tức</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">Liên hệ</a></li>
+                </ul>
+            </div>
+            <button title="Close (Esc)" type="button" class="mfp-close" onclick="myFunction()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <header id="header" class="header has-sticky sticky-jumb">
+            <div class="header-wrapper">
+                <div id="masthead" class="header-main">
+                    <div class="header-inner flex-row container logo-left medium-logo-center" role="navigation">
+                        <div id="logo" class="flex-col logo">
+                            <a href="#" rel="home"><img width="200" height="60" src="img/logo.jpg"></a>
+                        </div>
+                        <div class="flex-col show-for-medium flex-left">
+                            <ul class="mobile-nav nav nav-left">
+                                <li class="nav-icon has-icon">
+                                    <div class="header-button">
+                                        <a href="javascript:void(0)" data-open="#main-menu" data-pos="left" data-bg="main-menu-overlay" data-color="" class="icon primary button round is-small" aria-label="Menu" aria-controls="main-menu" aria-expanded="false" onclick="myFunction()"> 
+                                            <i class="fas fa-bars"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex-col hide-for-medium flex-left flex-grow">
+                            <ul class="header-nav header-nav-main nav nav-left nav-uppercase">
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page active">
+                                    <a href="#" class="nav-top-link">Trang chủ</a>   
+                                </li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                    <a href="#" class="nav-top-link">Giới thiệu</a>   
+                                </li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                    <a href="#" class="nav-top-link">Dịch vụ sửa chữa</a>   
+                                </li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                    <a href="#" class="nav-top-link">Tin tức</a>   
+                                </li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                    <a href="#" class="nav-top-link">Liên hệ</a>   
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex-col show-for-medium flex-right"> 
+                            <ul class="mobile-nav nav nav-right "> </ul> 
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="header-bg-container fill">
+                    <div class="header-bg-image fill"></div>
+                    <div class="header-bg-color fill"></div>
+                </div>
+            </div>
+        </header>
+        <main id="main">
+            <div id="content" class="blog-wrapper blog-archive page-wrapper">
+                <div class="row row-large row-divided ">
+                    <div class="post-sidebar large-3 col">
+                        <div class="widget-area" id="secondary">
+                            <aside id="search-2" class="widget widget_search">
+                                <form method="get" class="searchform" action="" role="search">
+                                    <div class="flex-row relative">
+                                        <div class="flex-col flex-grow">
+                                        <input type="search" class="search-field mb-0" name="s" value="" id="s" placeholder="Tìm kiếm…" autocomplete="off">
+                                        </div>
+                                        <div class="flex-col">
+                                            <button type="submit" class="ux-search-submit submit-button secondary button icon mb-0" aria-label="Submit">
+                                                <i class="fas fa-search"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="live-search-results text-left z-top">
+                                        <div class="autocomplete-suggestions" style="position: absolute; display: none; max-height: 300px; z-index: 9999;">
+                                        </div>
+                                    </div>
+                                </form>
+                            </aside>
+                            <aside id="nav_menu-7" class="widget widget_nav_menu nitro-offscreen">
+                                <span class="widget-title "><span>Dịch vụ sửa chữa</span></span>
+                                <div class="is-divider small"></div>
+                                <div class="menu-menu-dv-container">
+                                    <ul id="menu-menu-dv" class="menu">
+                                        <li id="menu-item-1001" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1001"><a href="#">Sửa Điện Thoại</a></li>
+                                        <li id="menu-item-1002" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1002"><a href="#">Sửa Laptop lấy ngay</a></li>
+                                    </ul>
+                                </div>
+                            </aside>
+                            <aside id="flatsome_recent_posts-3" class="widget flatsome_recent_posts nitro-offscreen">
+                                <span class="widget-title "><span>Bài viết mới </span></span>
+                                <div class="is-divider small"></div>
+                                <ul>
+                                    <li class="recent-blog-posts-li">
+                                        <div class="flex-row recent-blog-posts align-top pt-half pb-half">
+                                            <div class="flex-col mr-half">
+                                                <div class="badge post-date  badge-circle">
+                                                    <div style="background: url(img/thu-mua-dien-thoai-samsung-150x150.png); border: 0px;" class="badge-inner bg-fill lazyloaded">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flex-col flex-grow">
+                                                <a href="#" title="Thu Mua Điện Thoại SamSung Giá Cao Tất Cả Các Dòng">Thu Mua Điện Thoại SamSung Giá Cao Tất Cả Các Dòng</a>
+                                                <span class="post_comments op-7 block is-xsmall"><a href="#"></a></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="recent-blog-posts-li">
+                                        <div class="flex-row recent-blog-posts align-top pt-half pb-half">
+                                            <div class="flex-col mr-half">
+                                                <div class="badge post-date  badge-circle">
+                                                    <div style="background: url(img/sua-chan-sac-dien-thoai-150x150.jpg); border: 0px;" class="badge-inner bg-fill lazyloaded">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flex-col flex-grow">
+                                                <a href="#" title="Thay Chân Sạc Điện Thoại Chính Hãng, Giá Rẻ, Bảo Hành Dài">Thay Chân Sạc Điện Thoại Chính Hãng, Giá Rẻ, Bảo Hành Dài</a> <span class="post_comments op-7 block is-xsmall"><a href="#"></a></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="recent-blog-posts-li">
+                                        <div class="flex-row recent-blog-posts align-top pt-half pb-half"> 
+                                            <div class="flex-col mr-half">
+                                                <div class="badge post-date  badge-circle">
+                                                    <div style="background: url(img/sua-may-tinh-bang-150x150.jpg); border: 0px;" class="badge-inner bg-fill lazyloaded">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flex-col flex-grow">
+                                                <a href="#" title="Sửa Máy Tính Bảng Chất Lượng Giá Rẻ Bảo Hành Dài – Thumuavn">Sửa Máy Tính Bảng Chất Lượng Giá Rẻ Bảo Hành Dài – Thumuavn</a> <span class="post_comments op-7 block is-xsmall"><a href="#"></a></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="recent-blog-posts-li">
+                                        <div class="flex-row recent-blog-posts align-top pt-half pb-half"> 
+                                            <div class="flex-col mr-half">
+                                                <div class="badge post-date  badge-circle">
+                                                    <div style="background: url(img/thu-cu-doi-moi-dien-thoai-150x150.jpg); border: 0px;" class="badge-inner bg-fill lazyloaded">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flex-col flex-grow">
+                                                <a href="#" title="Thu Cũ Đổi Mới Điện Thoại – Thu Cao Bán Thấp Chỉ Có Tại Thumuavn">Thu Cũ Đổi Mới Điện Thoại – Thu Cao Bán Thấp Chỉ Có Tại Thumuavn</a>
+                                                <span class="post_comments op-7 block is-xsmall"><a href="#"></a></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="recent-blog-posts-li">
+                                        <div class="flex-row recent-blog-posts align-top pt-half pb-half"> <div class="flex-col mr-half">
+                                            <div class="badge post-date  badge-circle">
+                                                <div style="background: url(img/thu-mua-may-tinh-bang-150x150.jpg); border: 0px;" class="badge-inner bg-fill lazyloaded">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-col flex-grow">
+                                        <a href="#" title="Thu Mua Máy Tính Bảng Giá Cao Và Nhanh Chóng Hàng Đầu">Thu Mua Máy Tính Bảng Giá Cao Và Nhanh Chóng Hàng Đầu</a>
+                                        <span class="post_comments op-7 block is-xsmall"><a href="#"></a></span>
+                                    </div>
+                                </div>
+                                    </li>
+                                </ul>
+                            </aside>
+                        </div>
+                    </div>
+                    <div class="large-9 col medium-col-first">
+                        <article id="post-1482" class="post-1482 post type-post status-publish format-standard has-post-thumbnail hentry category-dich-vu-sua-chua category-tin-tuc">
+                            <div class="article-inner has-shadow box-shadow-3 box-shadow-2-hover">
+                                <header class="entry-header">
+                                    <div class="entry-header-text entry-header-text-top text-left">
+                                        <h6 class="entry-category is-xsmall"><a href="#" rel="category tag">DỊCH VỤ SỬA CHỮA</a>, <a href="#" rel="category tag">TIN TỨC</a></h6>
+                                        <h1 class="entry-title">Thay Chân Sạc Điện Thoại Chính Hãng, Giá Rẻ, Bảo Hành Dài</h1>
+                                        <div class="entry-divider is-divider small"></div>
+                                    </div>
+                                    <div class="entry-image relative">
+                                        <a href="#" class="nitro-offscreen">
+                                            <img
+                                                width="800"
+                                                height="450"
+                                                alt="Thay Chân Sạc Điện Thoại Chính Hãng, Giá Rẻ, Bảo Hành Dài"
+                                                sizes="(max-width: 800px) 100vw, 800px"
+                                                src="img/sua-chan-sac-dien-thoai.jpg"
+                                            />
+                                        </a>
+                                    </div>
+                                </header>
+                                <div class="entry-content single-page nitro-offscreen">
+                                    <p>
+                                        <a href="#"><strong>Thay chân sạc điện thoại</strong></a> bằng linh kiện chính hãng, giá siêu cạnh tranh và bảo hành bằng văn bản duy nhất tại Thumuavn
+                                    </p>
+                                    <p>
+                                        <span style="font-weight: 400;">
+                                            Chân sạc điện thoại là thiết bị phần cứng quan trọng ảnh hưởng trực tiếp đến khả năng tiếp nhận nguồn điện của điện thoại. Nhưng đây cũng đồng thời là thiết bị khá dễ bị hư hỏng do nhiều nguyên nhân ảnh hưởng khác nhau
+                                            từ quá trình sử dụng.
+                                        </span>
+                                    </p>
+                                    <p>
+                                        <span style="font-weight: 400;">Vậy có thể áp dụng những cách thức nào để khắc phục lỗi chân sạc tại nhà và nếu thay mới thì nên chọn địa chỉ nào để tiết kiệm chi phí nhưng vẫn đảm bảo hàng chính hãng? Hãy cùng </span>
+                                        <b>thumuavn.com</b><span style="font-weight: 400;"> lần lượt giải đáp các thắc mắc thông qua nội dung bài viết sau.</span>
+                                    </p>
+                                    <h2>Dấu hiệu chân sạc điện thoại bị hỏng</h2>
+                                    <figure id="attachment_1483" aria-describedby="caption-attachment-1483" style="width: 500px;" class="wp-caption aligncenter">
+                                        <img
+                                            alt="Thay Chân Sạc Điện Thoại Chính Hãng, Giá Rẻ, Bảo Hành Dài"
+                                            width="500"
+                                            height="375"
+                                            sizes="(max-width: 500px) 100vw, 500px"
+                                            src="img/sua-chan-sac-dien-thoai.jpg"
+                                        />
+                                        <figcaption id="caption-attachment-1483" class="wp-caption-text">Chân sạc hỏng điện thoại không được nạp pin</figcaption>
+                                    </figure>
+                                    <p>
+                                        <span style="font-weight: 400;">
+                                            Khi chân sạc bị hỏng đồng nghĩa với việc điện thoại sẽ không thể nhận được nguồn điện để tiếp tục hoạt động. Chính vì thế, nếu chân sạc hỏng cần nhanh chóng được sửa chữa hoặc thay mới. Một số dấu hiệu cho thấy chiếc
+                                            điện thoại đã bị hư phần chân sạc thường gặp là:
+                                        </span>
+                                    </p>
+                                    <ul>
+                                        <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Khi cắm sạc thì hiển thị pin không nhảy sạc, thử thiết bị cục sạc, cáp sạc khác vẫn không có tín hiệu&nbsp;</span></li>
+                                        <li style="font-weight: 400;" aria-level="1">
+                                            <span style="font-weight: 400;">Phát hiện vị trí chân sạc bị rỉ sét, không thể truyền tải được nguồn điện, nguyên nhân rất có thể do chân sạc bị ảnh hưởng oxy hóa từ không khí ẩm ướt.&nbsp;</span>
+                                        </li>
+                                        <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Chân sạc có dấu hiệu bị gãy hoặc tụt sâu vào bên trong nên không thể cắm sạc chính xác và cũng không thể kết nối nguồn điện.&nbsp;</span></li>
+                                        <li style="font-weight: 400;" aria-level="1">
+                                            <span style="font-weight: 400;">Tốc độ sạc pin rất chậm, không được như bình thường, pin chạy vào máy không đều và dễ bị ngắt điện giữa chừng khi đang sạc do sự lỏng lẻo giữa của chân sạc gây ra.&nbsp;</span>
+                                        </li>
+                                        <li style="font-weight: 400;" aria-level="1">
+                                            <span style="font-weight: 400;">Nguồn điện vào máy chập chờn cũng dễ gây ra tình trạng sập nguồn ngoài ý muốn khi sử dụng ngay khi không có ngoại lực tác động đến.&nbsp;</span>
+                                        </li>
+                                    </ul>
+                                    <h2>Nguyên nhân dẫn đến chân sạc điện thoại bị hỏng</h2>
+                                    <h3>Một số nguyên nhân khiến điện thoại không sạc được pin</h3>
+                                    <figure id="attachment_1484" aria-describedby="caption-attachment-1484" style="width: 500px;" class="wp-caption aligncenter">
+                                        <img
+                                            alt="Thay Chân Sạc Điện Thoại Chính Hãng, Giá Rẻ, Bảo Hành Dài"
+                                            width="500"
+                                            height="375"
+                                            sizes="(max-width: 500px) 100vw, 500px"
+                                            src="img/sua-chan-sac-dien-thoai.jpg"
+                                        />
+                                        <figcaption id="caption-attachment-1484" class="wp-caption-text">Pin không nạp được có thể do nhiều nguyên nhân khác</figcaption>
+                                    </figure>
+                                    <p>
+                                        <span style="font-weight: 400;">
+                                            Nguyên nhân gây ra lỗi không sạc được không đơn thuần chỉ do yếu tố chân sạc mà có thể do các bộ phận khác ảnh hưởng. Đúng vậy, có thể do chính nguồn điện nhà bạn đang trong trạng thái không ổn định hay do điện thoại bị
+                                            xung đột hoạt động giữa các phần mềm nào đó.
+                                        </span>
+                                    </p>
+                                    <p><span style="font-weight: 400;">Các vấn đề liên quan đến cục sạc, mạch điện cục sạc, dây cáp sạc cũng có thể khiến cho điện thoại không thể tiếp nhận pin.&nbsp;</span></p>
+                                    <p><span style="font-weight: 400;">Chính vì thế, ngay khi không thể nạp pin vào máy, nên cẩn thận kiểm tra tất cả những yếu tố liên quan để chắc rằng nguyên nhân chính xác nằm ở đâu.</span></p>
+                                    <p>
+                                        <span style="font-weight: 400;">
+                                            Kiểm tra xem liệu ổ điện có bị hỏng không, chỗ cắm chui có lỏng không; chân củ sạc có gặp phải tình trạng cong vênh, biến dạng không; có phải do bụi bẩn đang bám quá nhiều tại chui sạc không; liệu cáp sạc có bị đứt
+                                            không; bộ sạc đang dùng có phải hàng chính hãng không; điện thoại có bị rơi rớt trước đó không hay pin máy đang gặp vấn đề;….&nbsp;
+                                        </span>
+                                    </p>
+                                    <h3>Cách sửa nhanh chân sạc điện thoại tại nhà</h3>
+                                    <h4>Khởi động lại điện thoại</h4>
+                                    <p>
+                                        <span style="font-weight: 400;">
+                                            Điều đầu tiên người dùng nên nghĩ đến khi điện thoại không thể sạc được pin là do có sự cố phần mềm nào đó đã bị xung đột nhau trong khi hoạt động gây ra. Hiểu theo hướng này, cách giải quyết đầu tiên chính là nên thử
+                                            khởi động lại điện thoại sau đó thử sạc lại lần nữa. Khi khởi động máy, các ứng dụng đang xung đột hoặc đang trong trạng thái chạy ngầm trước đó sẽ được tắt đi và giúp cho vấn đề hiện tại được giải quyết. Trong trường
+                                            hợp máy bị đơ cảm ứng, bị sập nguồn, tự thoát về màn hình chính,…cũng nên được áp dụng cách này để khắc phục.
+                                        </span>
+                                    </p>
+                                    <h4>Thử thay thế cục sạc và cáp sạc khác</h4>
+                                    <figure id="attachment_1485" aria-describedby="caption-attachment-1485" style="width: 500px;" class="wp-caption aligncenter">
+                                        <img
+                                            alt="Thay Chân Sạc Điện Thoại Chính Hãng, Giá Rẻ, Bảo Hành Dài"
+                                            width="500"
+                                            height="375"
+                                            sizes="(max-width: 500px) 100vw, 500px"
+                                            src="img/sua-chan-sac-dien-thoai.jpg"
+                                        />
+                                        <figcaption id="caption-attachment-1485" class="wp-caption-text">Thử thay thế cục sạc và cáp sạc</figcaption>
+                                    </figure>
+                                    <p>
+                                        <span style="font-weight: 400;">
+                                            Lỗi không sạc pin vào điện thoại đôi khi cũng có thể do chính cục sạc và cáp sạc gây ra. Nguyên nhân đầu tiên có thể nằm ở việc người dùng đã không sử dụng đúng bộ sạc chính hãng của nhà sản xuất nên làm ảnh hưởng tốc độ
+                                            sạc cũng như tuổi thọ máy về lâu về dài.&nbsp;
+                                        </span>
+                                    </p>
+                                    <p>
+                                        <span style="font-weight: 400;">
+                                            Yếu tố thứ hai rất có thể do cục sạc hoặc cáp sạc đã bị hỏng và không thể truyền tải được nguồn điện. Để kiểm tra điều này, người dùng nên thay thế cục sạc, giữ nguyên từng bộ phận khác để xem pin có vào không rồi tiếp
+                                            tục làm tương tự với dây cáp sạc. Nếu thường xuyên làm rơi rớt cục sạc hay quấn cáp sạc quá chặt sẽ rất dễ làm hỏng thiết bị sạc.
+                                        </span>
+                                    </p>
+                                    <blockquote>
+                                        <p>&gt;Có thể bạn sẽ cần:</p>
+                                        <p><a href="https://thumuavn.com/sua-may-tinh-bang/">Sửa Máy Tính Bảng Chất Lượng Giá Rẻ Bảo Hành Dài – Thumuavn</a></p>
+                                        <p><a href="https://thumuavn.com/sua-tai-nghe/">Hướng Dẫn Bạn Cách Sửa Tai Nghe Tại Nhà, Ai Cũng Làm Được</a></p>
+                                        <p><a href="https://thumuavn.com/dien-thoai-mat-song/">Sửa Điện Thoại Mất Sóng Nhanh Và Dễ Hiểu Tại Nhà</a></p>
+                                    </blockquote>
+                                    <h4>Đổi ổ sạc điện khác</h4>
+                                    <p>
+                                        <span style="font-weight: 400;">
+                                            Nếu ổ điện để sạc điện thoại trước đó bị lỏng hoặc có nguồn điện không được ổn định, người dùng nên thử đổi sang ổ điện khác để cắm sạc xem có giải quyết được vấn đề hay không. Hoặc cũng nên thử sạc bằng nguồn điện từ
+                                            cục sạc dự phòng để chắc rằng nguyên nhân làm ảnh hưởng đến nguồn điện không phải yếu tố này gây ra.&nbsp;
+                                        </span>
+                                    </p>
+                                    <h4>Dùng tăm bông làm sạch chân sạc và khe sạc</h4>
+                                    <p>
+                                        <span style="font-weight: 400;">
+                                            Nếu bằng mắt thường phát hiện khe sạc đang bị bám nhiều bụi bẩn hoặc xuất hiện những vết rỉ sét, đây rất có thể là lý do khiến cho nguồn điện không thể vào máy được. Người dùng điện thoại nên sử dụng tăm bông sạch nhẹ
+                                            nhàng ma sát làm sạch tại vị trí khe sạc và chân sạc sau đó thử cắm sạc lại. Cách làm này khá hiệu quả nếu điện thoại của bạn phải thường xuyên tiếp xúc với môi trường nhiều bụi bẩn, độ ẩm cao.&nbsp;
+                                        </span>
+                                    </p>
+                                    <h4>Khôi phục cài đặt gốc của máy</h4>
+                                    <figure id="attachment_1486" aria-describedby="caption-attachment-1486" style="width: 500px;" class="wp-caption aligncenter">
+                                        <img
+                                            alt="Thay Chân Sạc Điện Thoại Chính Hãng, Giá Rẻ, Bảo Hành Dài"
+                                            width="500"
+                                            height="375"
+                                            sizes="(max-width: 500px) 100vw, 500px"
+                                            src="img/sua-chan-sac-dien-thoai.jpg"
+                                        />
+                                        <figcaption id="caption-attachment-1486" class="wp-caption-text">Lỗi phần mềm có thể dẫn tới máy không nhảy pin khi cắm sạc</figcaption>
+                                    </figure>
+                                    <p>
+                                        <span style="font-weight: 400;">
+                                            Một trong những cách hiệu quả nhất để khắc phục những lỗi phần mềm điện thoại chính là khôi phục lại cài đặt gốc cho máy. Cách làm này khá đơn giản và người dùng có thể tự thực hiện tại nhà mà không cần mang máy đến cửa
+                                            tiệm sửa chữa để nhờ trợ giúp.
+                                        </span>
+                                    </p>
+                                    <p>
+                                        <span style="font-weight: 400;">
+                                            Đối với điện thoại chạy bằng hệ điều hành Android và điện thoại chạy bằng hệ điều hành IOS sẽ có sự khác biệt đôi chút ở các bước thực hiện nhưng nhìn chung các thao tác dễ thực hiện. Đây cũng có thể xem như bước cuối
+                                            cùng mà người dùng có thể tự thử tại nhà để khắc phục các lỗi gặp phải ở điện thoại.
+                                        </span>
+                                    </p>
+                                    <p>
+                                        <span style="font-weight: 400;">
+                                            Trong trường hợp đã thử tất cả mọi cách mà vẫn không thể sạc được pin cho máy, vấn đề đa phần sẽ thuộc về phần cứng. Người dùng cần mang máy đến tiệm sửa chữa để được kiểm tra, xác định rõ nguyên nhân do đâu và tiến hành
+                                            sửa chữa.
+                                        </span>
+                                    </p>
+                                    <p>
+                                        <span style="font-weight: 400;">
+                                            Nên ưu tiên chọn cửa hàng uy tín, có độ tin cậy cao và cam kết thay thế mới thiết bị kèm theo phiếu bảo hành chính hãng. Gợi ý nên tìm hiểu chi tiết trước thông qua website để có được mức giá tốt nhất trước khi đến cửa
+                                            tiệm.
+                                        </span>
+                                    </p>
+                                    <h2>Thay chân sạc điện thoại giá bao nhiêu tại TP.HCM ?</h2>
+                                    <figure id="attachment_1487" aria-describedby="caption-attachment-1487" style="width: 500px;" class="wp-caption aligncenter">
+                                        <img
+                                            alt="Thay Chân Sạc Điện Thoại Chính Hãng, Giá Rẻ, Bảo Hành Dài"
+                                            width="500"
+                                            height="375"
+                                            sizes="(max-width: 500px) 100vw, 500px"
+                                            src="img/sua-chan-sac-dien-thoai.jpg"
+                                        />
+                                        <figcaption id="caption-attachment-1487" class="wp-caption-text">Thay chân sạc điện thoại chính hãng tại thumuavn.com</figcaption>
+                                    </figure>
+                                    <p>
+                                        <span style="font-weight: 400;">
+                                            Tại thành phố Hồ Chí Minh, giá thay chân sạc thay đổi tùy thuộc theo thương hiệu và các dòng sản phẩm. Người dùng nên chọn lựa kỹ lưỡng những cửa hàng uy tín, chất lượng, cung cấp mặt hàng chính hãng như thumuavn.com để
+                                            được cung cấp giá sửa chữa cũng như thay thế tốt nhất thị trường. Theo đó, có thể tham khảo mức giá trung bình khi thay mới các thiết bị tại bảng sau:
+                                        </span>
+                                    </p>
+                                    <table style="height: 399px;" width="766">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <p style="text-align: center;"><b>STT</b></p>
+                                                </td>
+                                                <td style="text-align: center;"><b>THƯƠNG HIỆU</b></td>
+                                                <td style="text-align: center;"><b>LOẠI CHÂN SẠC</b></td>
+                                                <td style="text-align: center;">
+                                                    <p style="text-align: center;"><b>GIÁ THAY THAM KHẢO</b></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><span style="font-weight: 400;">1</span></td>
+                                                <td style="text-align: center;"><span style="font-weight: 400;">Samsung</span></td>
+                                                <td style="text-align: center;"><span style="font-weight: 400;">Chân sạc Samsung Book 10.6 W620</span></td>
+                                                <td style="text-align: center;"><span style="font-weight: 400;">700.000 đồng</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span style="font-weight: 400;">2</span></td>
+                                                <td style="text-align: center;"><span style="font-weight: 400;">Samsung</span></td>
+                                                <td style="text-align: center;"><span style="font-weight: 400;">Chân sạc Samsung Note 9</span></td>
+                                                <td style="text-align: center;"><span style="font-weight: 400;">700.000 đồng</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span style="font-weight: 400;">3</span></td>
+                                                <td style="text-align: center;"><span style="font-weight: 400;">Samsung</span></td>
+                                                <td style="text-align: center;"><span style="font-weight: 400;">Chân sạc Samsung Galaxy Tab A6.0 T510</span></td>
+                                                <td style="text-align: center;"><span style="font-weight: 400;">700.000 đồng</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span style="font-weight: 400;">4</span></td>
+                                                <td style="text-align: center;"><span style="font-weight: 400;">Samsung</span></td>
+                                                <td style="text-align: center;"><span style="font-weight: 400;">Chân sạc Samsung Galaxy A10s</span></td>
+                                                <td style="text-align: center;"><span style="font-weight: 400;">500.000 đồng</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span style="font-weight: 400;">5</span></td>
+                                                <td style="text-align: center;"><span style="font-weight: 400;">Samsung</span></td>
+                                                <td style="text-align: center;"><span style="font-weight: 400;">Chân sạc Samsung Galaxy A20s</span></td>
+                                                <td style="text-align: center;"><span style="font-weight: 400;">500.000 đồng</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span style="font-weight: 400;">6</span></td>
+                                                <td style="text-align: center;"><span style="font-weight: 400;">Xiaomi</span></td>
+                                                <td style="text-align: center;"><span style="font-weight: 400;">Chân sạc Xiaomi Redmi Note 3/Pro</span></td>
+                                                <td style="text-align: center;"><span style="font-weight: 400;">300.000 đồng</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span style="font-weight: 400;">7</span></td>
+                                                <td style="text-align: center;"><span style="font-weight: 400;">Xiaomi</span></td>
+                                                <td style="text-align: center;"><span style="font-weight: 400;">Chân sạc Xiaomi mi 4</span></td>
+                                                <td style="text-align: center;"><span style="font-weight: 400;">300.000 đồng</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span style="font-weight: 400;">8</span></td>
+                                                <td style="text-align: center;"><span style="font-weight: 400;">Xiaomi</span></td>
+                                                <td style="text-align: center;"><span style="font-weight: 400;">Chân sạc Xiaomi Redmi 5&nbsp; Plus</span></td>
+                                                <td style="text-align: center;"><span style="font-weight: 400;">Liên hệ thumuavn.com</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span style="font-weight: 400;">9</span></td>
+                                                <td style="text-align: center;"><span style="font-weight: 400;">Iphone</span></td>
+                                                <td style="text-align: center;"><span style="font-weight: 400;">Chân sạc iPhone 12 Pro Max&nbsp;</span></td>
+                                                <td style="text-align: center;"><span style="font-weight: 400;">2.150.000 đồng</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span style="font-weight: 400;">10</span></td>
+                                                <td style="text-align: center;"><span style="font-weight: 400;">Iphone</span></td>
+                                                <td style="text-align: center;"><span style="font-weight: 400;">Chân sạc iPhone 12 Pro</span></td>
+                                                <td style="text-align: center;"><span style="font-weight: 400;">1.900.000 đồng</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span style="font-weight: 400;">11</span></td>
+                                                <td style="text-align: center;"><span style="font-weight: 400;">Iphone</span></td>
+                                                <td style="text-align: center;"><span style="font-weight: 400;">Chân sạc iPhone 11 Pro</span></td>
+                                                <td style="text-align: center;"><span style="font-weight: 400;">1.700.000 đồng</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span style="font-weight: 400;">12</span></td>
+                                                <td style="text-align: center;"><span style="font-weight: 400;">Iphone</span></td>
+                                                <td style="text-align: center;"><span style="font-weight: 400;">Chân sạc iPhone Xs Max</span></td>
+                                                <td style="text-align: center;"><span style="font-weight: 400;">1.150.000 đồng</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: center;"><span style="font-weight: 400;">13</span></td>
+                                                <td style="text-align: center;"><span style="font-weight: 400;">Iphone</span></td>
+                                                <td style="text-align: center;"><span style="font-weight: 400;">Chân sạc iPhone 11</span></td>
+                                                <td style="text-align: center;"><span style="font-weight: 400;">1.450.000 đồng</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p>Giá có thể tăng hoặc giảm do thị trường linh kiện có thể lên và xuống, để được giá tốt nhất các bạn hãy liên hệ Thumuavn nhé, chúng tôi sẽ hỗ trợ giải đáp tận tình hết mức có thể</p>
+                                    <blockquote>
+                                        <p>&gt;Có thể bạn sẽ cần:</p>
+                                        <p><a href="#">Hướng Dẫn Bạn Cách Khắc Phục Thẻ Nhớ Bị Lỗi Nhanh Tại Nhà</a></p>
+                                    </blockquote>
+                                    <h2>Địa chỉ thay chân sạc điện thoại</h2>
+                                    <p>
+                                        <span style="font-weight: 400;">
+                                            Như vậy, trước khi xác định nguyên nhân không sạc được có phải do chân sạc hay không người dùng nên chủ động kiểm tra tất cả các bộ phận, thiết bị có liên quan. Nếu vấn đề không được khắc phục, hãy liên hệ ngay với
+                                            thumuavn.com để được báo giá thay chân sạc chính xác kèm theo nhiều ưu đãi hấp dẫn.
+                                        </span>
+                                    </p>
+                                    <h4>Thông tin liên hệ Thumuavn:</h4>
+                                    <ul>
+                                        <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">&nbsp;Địa chỉ: Số 6 Nguyễn Bỉnh Khiêm, Phường 1, Quận Gò Vấp, TP.HCM</span></li>
+                                        <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">&nbsp;Điện thoại: 0911 116 997 – 0943 354 321</span></li>
+                                        <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">&nbsp;Email: thumuavn1@gmail.com</span></li>
+                                        <li style="font-weight: 400;" aria-level="1">
+                                            <span style="font-weight: 400;">&nbsp;Website: <a href="#">thumuavn.com</a></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <nav role="navigation" id="nav-below" class="navigation-post nitro-offscreen">
+                                    <div class="flex-row next-prev-nav bt bb">
+                                        <div class="flex-col flex-grow nav-prev text-left">
+                                            <div class="nav-previous">
+                                                <a href="#" rel="prev">
+                                                    <span class="hide-for-small"><i class="fas fa-angle-left"></i></span> Sửa Máy Tính Bảng Chất Lượng Giá Rẻ Bảo Hành Dài – Thumuavn
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="flex-col flex-grow nav-next text-right">
+                                            <div class="nav-next">
+                                                <a href="#" rel="next">
+                                                    Thu Mua Điện Thoại SamSung Giá Cao Tất Cả Các Dòng <span class="hide-for-small"><i class="fas fa-angle-right"></i></span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </nav>
+                            </div>
+                        </article>
+                        <div id="comments" class="comments-area nitro-offscreen">
+                            <div id="respond" class="comment-respond">
+                                <h3 id="reply-title" class="comment-reply-title">
+                                    Trả lời <small><a rel="nofollow" id="cancel-comment-reply-link" href="#" style="display: none;">Hủy</a></small>
+                                </h3>
+                                <form action="" method="post" id="commentform" class="comment-form" novalidate="">
+                                    <p class="comment-notes"><span id="email-notes">Email của bạn sẽ không được hiển thị công khai.</span> Các trường bắt buộc được đánh dấu <span class="required">*</span></p>
+                                    <p class="comment-form-comment"><label for="comment">Bình luận</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p>
+                                    <p class="comment-form-author">
+                                        <label for="author">Tên <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required="required" />
+                                    </p>
+                                    <p class="comment-form-email">
+                                        <label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required="required" />
+                                    </p>
+                                    <p class="comment-form-url"><label for="url">Trang web</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" /></p>
+                                    <p class="comment-form-cookies-consent">
+                                        <input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" />
+                                        <label for="wp-comment-cookies-consent">Lưu tên của tôi, email, và trang web trong trình duyệt này cho lần bình luận kế tiếp của tôi.</label>
+                                    </p>
+                                    <p class="form-submit">
+                                        <input name="submit" type="submit" id="submit" class="submit" value="Phản hồi" /> <input type="hidden" name="comment_post_ID" value="1482" id="comment_post_ID" />
+                                        <input type="hidden" name="comment_parent" id="comment_parent" value="0" />
+                                    </p>
+                                </form>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer id="footer" class="footer-wrapper">
+            <section class="section footer">
+                <div class="bg section-bg fill bg-fill bg-loaded"></div>
+                <section class="section-content relative">
+                    <div class="gap-element clearfix gap-element-center"></div>
+                    <div class="row row-small">
+                        <div class="col medium-5 small-12 large-5">
+                            <div class="col-inner">
+                                <div class="content_footer">
+                                    <h4><span style="color:#fff;">THU MUA IPHONE CŨ GIÁ CAO TẠI TPHCM</span></h4>
+                                    <ul class="list-info">
+                                        <li><span style="color:#fff;"><i class="fas fa-map-marker-alt"></i> 6 Nguyễn Bỉnh Khiêm, phường 1, quận Gò Vấp, TP. HCM</span></li>
+                                        <li><span style="color:#fff;"><i class="fas fa-phone-alt"></i> Điện thoại: 0911116997 - 0943354321</span></li>
+                                        <li><span style="color:#fff;"><i class="fas fa-envelope"></i> Email: thumuavn1@gmail.com</span></li>
+                                        <li><span style="color:#fff;"><i class="fas fa-globe-americas"></i> Website: thumuavn.com</span></li>
+                                    </ul>
+                                </div>
+                                <div class="social-icons follow-icons full-width text-left">
+                                    <a href="https://www.facebook.com/tienthumuavn/" target="_blank" data-label="Facebook" rel="noopener noreferrer nofollow" class="icon primary button circle facebook tooltip tooltipstered"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer nofollow" data-label="Instagram" class="icon primary button circle instagram tooltip tooltipstered"><i class="fab fa-instagram"></i></a>
+                                    <a href="#" target="_blank" data-label="Twitter" rel="noopener noreferrer nofollow" class="icon primary button circle twitter tooltip tooltipstered"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer nofollow" data-label="YouTube" class="icon primary button circle youtube tooltip tooltipstered"><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col medium-3 small-12 large-3">
+                            <div class="col-inner">
+                                <h4>CHÍNH SÁCH</h4>
+                                <ul>
+                                    <li><a href="#" target="_blank">Chính sách thanh toán</a></li>
+                                    <li><a href="#" target="_blank">Chính sách trả hàng</a></li>
+                                    <li><a href="#" target="_blank">Chính sách mua hàng</a></li>
+                                    <li><a href="#" target="_blank">Chính sách giao hàng</a></li>
+                                    <li><a href="#" target="_blank">Hỗ trợ khách hàng</a></li>
+                                    <li><a href="#" target="_blank">Liên hệ - Bản đồ</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col medium-4 small-12 large-4">
+                            <div class="col-inner text-right">
+                                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffwdvnam%2F%3Fref%3Dpages_you_manage&tabs=timeline&width=368&height=250&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="390" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <div class="absolute-footer dark medium-text-center text-center">
+                <div class="container clearfix">
+                    <div class="footer-primary pull-left">
+                        <div class="copyright-footer"> Copyright 2021 © <strong>THU MUA DIEN THOAI GIA CAO TPHCM. All right Reserved.</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div id="button-contact-vr">
+        <div id="zalo-vr" class="button-contact">
+            <div class="phone-vr">
+                <div class="phone-vr-circle-fill"></div>
+                <div class="phone-vr-img-circle">
+                    <a target="_blank" href="#"><img src="img/zalo.png" alt="zalo"></a>
+                </div>
+            </div>
+        </div>
+        <div id="phone-vr" class="button-contact">
+            <div class="phone-vr">
+                <div class="phone-vr-circle-fill"></div>
+                <div class="phone-vr-img-circle">
+                    <a href="tel:"><img src="img/phone.png" alt="phone"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+<script src="assets/js/slick.min.js"></script>
+<script src="assets/js/myjs.js"></script>

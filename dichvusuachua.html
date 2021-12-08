@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sửa chữa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body>
+    <a id="button" class=""></a>
+    <div id="wrapper">
+        <div class="mfp-bg" id="overplay"></div>
+        <div id="main-menu" class="mobile-sidebar">    
+            <div class="sidebar-menu">
+                <ul class="nav nav-sidebar  nav-vertical nav-uppercase">
+                    <li class="header-search-form search-form html relative has-icon">
+                        <div class="header-search-form-wrapper">
+                            <div class="searchform-wrapper ux-search-box relative is-normal">
+                                <form role="search" method="get" class="searchform" action="">
+                                    <div class="flex-row relative">
+                                        <div class="flex-col flex-grow">
+                                            <label class="screen-reader-text" for="">Tìm kiếm:</label>
+                                            <input type="search" class="search-field mb-0" placeholder="Tìm kiếm…" value="" name="s" autocomplete="off">
+                                            <input type="hidden" name="post_type" value="product">
+                                        </div>
+                                        <div class="flex-col">
+                                            <button type="submit" value="Tìm kiếm" class="ux-search-submit submit-button secondary button icon mb-0"> <i class="fas fa-search"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="live-search-results text-left z-top">
+                                        <div class="autocomplete-suggestions" style="position: absolute; display: none; max-height: 300px; z-index: 9999;"></div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">Trang chủ</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">Giới Thiệu</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">DỊCH VỤ SỬA CHỮA</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">Tin Tức</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">Liên hệ</a></li>
+                </ul>
+            </div>
+            <button title="Close (Esc)" type="button" class="mfp-close" onclick="myFunction()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <header id="header" class="header has-sticky sticky-jumb">
+            <div class="header-wrapper">
+                <div id="masthead" class="header-main">
+                    <div class="header-inner flex-row container logo-left medium-logo-center" role="navigation">
+                        <div id="logo" class="flex-col logo">
+                            <a href="#" rel="home"><img width="200" height="60" src="img/logo.jpg"></a>
+                        </div>
+                        <div class="flex-col show-for-medium flex-left">
+                            <ul class="mobile-nav nav nav-left">
+                                <li class="nav-icon has-icon">
+                                    <div class="header-button">
+                                        <a href="javascript:void(0)" data-open="#main-menu" data-pos="left" data-bg="main-menu-overlay" data-color="" class="icon primary button round is-small" aria-label="Menu" aria-controls="main-menu" aria-expanded="false" onclick="myFunction()"> 
+                                            <i class="fas fa-bars"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex-col hide-for-medium flex-left flex-grow">
+                            <ul class="header-nav header-nav-main nav nav-left nav-uppercase">
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page active">
+                                    <a href="#" class="nav-top-link">Trang chủ</a>   
+                                </li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                    <a href="#" class="nav-top-link">Giới thiệu</a>   
+                                </li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                    <a href="#" class="nav-top-link">Dịch vụ sửa chữa</a>   
+                                </li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                    <a href="#" class="nav-top-link">Tin tức</a>   
+                                </li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                    <a href="#" class="nav-top-link">Liên hệ</a>   
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex-col show-for-medium flex-right"> 
+                            <ul class="mobile-nav nav nav-right "> </ul> 
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="header-bg-container fill">
+                    <div class="header-bg-image fill"></div>
+                    <div class="header-bg-color fill"></div>
+                </div>
+            </div>
+        </header>
+        <main id="main">
+            <div id="content" class="blog-wrapper blog-archive page-wrapper">
+                <div class="row row-large row-divided ">
+                    <div class="post-sidebar large-3 col">
+                        <div class="widget-area" id="secondary">
+                            <aside id="search-2" class="widget widget_search">
+                                <form method="get" class="searchform" action="" role="search">
+                                    <div class="flex-row relative">
+                                        <div class="flex-col flex-grow">
+                                        <input type="search" class="search-field mb-0" name="s" value="" id="s" placeholder="Tìm kiếm…" autocomplete="off">
+                                        </div>
+                                        <div class="flex-col">
+                                            <button type="submit" class="ux-search-submit submit-button secondary button icon mb-0" aria-label="Submit">
+                                                <i class="fas fa-search"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="live-search-results text-left z-top">
+                                        <div class="autocomplete-suggestions" style="position: absolute; display: none; max-height: 300px; z-index: 9999;">
+                                        </div>
+                                    </div>
+                                </form>
+                            </aside>
+                            <aside id="nav_menu-7" class="widget widget_nav_menu nitro-offscreen">
+                                <span class="widget-title "><span>Dịch vụ sửa chữa</span></span>
+                                <div class="is-divider small"></div>
+                                <div class="menu-menu-dv-container">
+                                    <ul id="menu-menu-dv" class="menu">
+                                        <li id="menu-item-1001" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1001"><a href="#">Sửa Điện Thoại</a></li>
+                                        <li id="menu-item-1002" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1002"><a href="#">Sửa Laptop lấy ngay</a></li>
+                                    </ul>
+                                </div>
+                            </aside>
+                            <aside id="flatsome_recent_posts-3" class="widget flatsome_recent_posts nitro-offscreen">
+                                <span class="widget-title "><span>Bài viết mới </span></span>
+                                <div class="is-divider small"></div>
+                                <ul>
+                                    <li class="recent-blog-posts-li">
+                                        <div class="flex-row recent-blog-posts align-top pt-half pb-half">
+                                            <div class="flex-col mr-half">
+                                                <div class="badge post-date  badge-circle">
+                                                    <div style="background: url(img/thu-mua-dien-thoai-samsung-150x150.png); border: 0px;" class="badge-inner bg-fill lazyloaded">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flex-col flex-grow">
+                                                <a href="#" title="Thu Mua Điện Thoại SamSung Giá Cao Tất Cả Các Dòng">Thu Mua Điện Thoại SamSung Giá Cao Tất Cả Các Dòng</a>
+                                                <span class="post_comments op-7 block is-xsmall"><a href="#"></a></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="recent-blog-posts-li">
+                                        <div class="flex-row recent-blog-posts align-top pt-half pb-half">
+                                            <div class="flex-col mr-half">
+                                                <div class="badge post-date  badge-circle">
+                                                    <div style="background: url(img/sua-chan-sac-dien-thoai-150x150.jpg); border: 0px;" class="badge-inner bg-fill lazyloaded">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flex-col flex-grow">
+                                                <a href="#" title="Thay Chân Sạc Điện Thoại Chính Hãng, Giá Rẻ, Bảo Hành Dài">Thay Chân Sạc Điện Thoại Chính Hãng, Giá Rẻ, Bảo Hành Dài</a> <span class="post_comments op-7 block is-xsmall"><a href="#"></a></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="recent-blog-posts-li">
+                                        <div class="flex-row recent-blog-posts align-top pt-half pb-half"> 
+                                            <div class="flex-col mr-half">
+                                                <div class="badge post-date  badge-circle">
+                                                    <div style="background: url(img/sua-may-tinh-bang-150x150.jpg); border: 0px;" class="badge-inner bg-fill lazyloaded">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flex-col flex-grow">
+                                                <a href="#" title="Sửa Máy Tính Bảng Chất Lượng Giá Rẻ Bảo Hành Dài – Thumuavn">Sửa Máy Tính Bảng Chất Lượng Giá Rẻ Bảo Hành Dài – Thumuavn</a> <span class="post_comments op-7 block is-xsmall"><a href="#"></a></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="recent-blog-posts-li">
+                                        <div class="flex-row recent-blog-posts align-top pt-half pb-half"> 
+                                            <div class="flex-col mr-half">
+                                                <div class="badge post-date  badge-circle">
+                                                    <div style="background: url(img/thu-cu-doi-moi-dien-thoai-150x150.jpg); border: 0px;" class="badge-inner bg-fill lazyloaded">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flex-col flex-grow">
+                                                <a href="#" title="Thu Cũ Đổi Mới Điện Thoại – Thu Cao Bán Thấp Chỉ Có Tại Thumuavn">Thu Cũ Đổi Mới Điện Thoại – Thu Cao Bán Thấp Chỉ Có Tại Thumuavn</a>
+                                                <span class="post_comments op-7 block is-xsmall"><a href="#"></a></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="recent-blog-posts-li">
+                                        <div class="flex-row recent-blog-posts align-top pt-half pb-half"> <div class="flex-col mr-half">
+                                            <div class="badge post-date  badge-circle">
+                                                <div style="background: url(img/thu-mua-may-tinh-bang-150x150.jpg); border: 0px;" class="badge-inner bg-fill lazyloaded">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-col flex-grow">
+                                        <a href="#" title="Thu Mua Máy Tính Bảng Giá Cao Và Nhanh Chóng Hàng Đầu">Thu Mua Máy Tính Bảng Giá Cao Và Nhanh Chóng Hàng Đầu</a>
+                                        <span class="post_comments op-7 block is-xsmall"><a href="#"></a></span>
+                                    </div>
+                                </div>
+                                    </li>
+                                </ul>
+                            </aside>
+                        </div>
+                    </div>
+                    <div class="large-9 col medium-col-first">
+                        <div class="row large-columns-3 medium-columns- small-columns-1 has-shadow row-box-shadow-3 row-box-shadow-2-hover">
+                            <div class="col post-item">
+                                <div class="col-inner">
+                                    <a href="#" class="plain">
+                                        <div class="box box-text-bottom box-blog-post has-hover">
+                                            <div class="box-image">
+                                                <div class="image-cover" style="padding-top:56%;">
+                                                    <img width="300" height="169" alt="Thay Chân Sạc Điện Thoại Chính Hãng, Giá Rẻ, Bảo Hành Dài" src="img/sua-chan-sac-dien-thoai-300x169.jpg">
+                                                </div>
+                                            </div>
+                                            <div class="box-text text-left">
+                                                <div class="box-text-inner blog-post-inner">
+                                                    <h5 class="post-title is-large ">Thay Chân Sạc Điện Thoại Chính Hãng, Giá Rẻ, Bảo Hành Dài</h5>
+                                                    <div class="is-divider"></div>
+                                                    <p class="from_the_blog_excerpt ">Thay chân sạc điện thoại bằng linh kiện chính hãng, giá siêu cạnh tranh và... </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col post-item">
+                                <div class="col-inner">
+                                    <a href="#" class="plain">
+                                        <div class="box box-text-bottom box-blog-post has-hover">
+                                            <div class="box-image">
+                                                <div class="image-cover" style="padding-top:56%;">
+                                                    <img width="300" height="169" alt="Sửa Máy Tính Bảng Chất Lượng Giá Rẻ Bảo Hành Dài – Thumuavn" src="img/sua-may-tinh-bang-300x200.jpg">
+                                                </div>
+                                            </div>
+                                            <div class="box-text text-left">
+                                                <div class="box-text-inner blog-post-inner">
+                                                    <h5 class="post-title is-large ">Sửa Máy Tính Bảng Chất Lượng Giá Rẻ Bảo Hành Dài – Thumuavn</h5>
+                                                    <div class="is-divider"></div>
+                                                    <p class="from_the_blog_excerpt ">Sửa máy tính bảng giá cả hợp lý, linh kiện chính hãng và bảo hành... </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col post-item">
+                                <div class="col-inner">
+                                    <a href="#" class="plain">
+                                        <div class="box box-text-bottom box-blog-post has-hover">
+                                            <div class="box-image">
+                                                <div class="image-cover" style="padding-top:56%;">
+                                                    <img width="300" height="169" alt="Sửa Điện Thoại Oppo Chính Hãng, Chất Lượng, Giá Rẻ, Bảo Hành Dài" src="img/sua-dien-thoai-oppo-300x222.jpg">
+                                                </div>
+                                            </div>
+                                            <div class="box-text text-left">
+                                                <div class="box-text-inner blog-post-inner">
+                                                    <h5 class="post-title is-large ">Sửa Điện Thoại Oppo Chính Hãng, Chất Lượng, Giá Rẻ, Bảo Hành Dài</h5>
+                                                    <div class="is-divider"></div>
+                                                    <p class="from_the_blog_excerpt ">Sửa điện thoại Oppo ở đâu ? Làm sao để chọn được nơi sửa điện... </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col post-item">
+                                <div class="col-inner">
+                                    <a href="#" class="plain">
+                                        <div class="box box-text-bottom box-blog-post has-hover">
+                                            <div class="box-image">
+                                                <div class="image-cover" style="padding-top:56%;">
+                                                    <img width="300" height="169" alt="Dịch Vụ Sửa Điện Thoại Sony – Linh Kiện Chính Hãng – KTV Lành Nghề" src="img/sua-dien-thoai-sony-300x191.jpg">
+                                                </div>
+                                            </div>
+                                            <div class="box-text text-left">
+                                                <div class="box-text-inner blog-post-inner">
+                                                    <h5 class="post-title is-large ">Dịch Vụ Sửa Điện Thoại Sony – Linh Kiện Chính Hãng – KTV Lành Nghề</h5>
+                                                    <div class="is-divider"></div>
+                                                    <p class="from_the_blog_excerpt ">Sony là thương hiệu điện thoại chất lượng cao với màn hình điện thoại sắc... </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col post-item">
+                                <div class="col-inner">
+                                    <a href="#" class="plain">
+                                        <div class="box box-text-bottom box-blog-post has-hover">
+                                            <div class="box-image">
+                                                <div class="image-cover" style="padding-top:56%;">
+                                                    <img width="300" height="169" alt="Dấu Hiệu Cần Thay Pin Điện Thoại Và Hướng Dẫn Sử Dụng Pin Đúng Cách" src="img/thay-pin-dien-thoai-13-300x225.jpg">
+                                                </div>
+                                            </div>
+                                            <div class="box-text text-left">
+                                                <div class="box-text-inner blog-post-inner">
+                                                    <h5 class="post-title is-large ">Dấu Hiệu Cần Thay Pin Điện Thoại Và Hướng Dẫn Sử Dụng Pin Đúng Cách</h5>
+                                                    <div class="is-divider"></div>
+                                                    <p class="from_the_blog_excerpt ">Pin là linh kiện tiêu hao. Chính vì vậy sau một thời gian sử dụng... </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col post-item">
+                                <div class="col-inner">
+                                    <a href="#" class="plain">
+                                        <div class="box box-text-bottom box-blog-post has-hover">
+                                            <div class="box-image">
+                                                <div class="image-cover" style="padding-top:56%;">
+                                                    <img width="300" height="169" alt="Hiểu Về Phần Cứng Trên Điện Thoại Và Cách Sửa Phần Cứng Điện Thoại" src="img/sua-phan-cung-dien-thoai-300x141.jpg">
+                                                </div>
+                                            </div>
+                                            <div class="box-text text-left">
+                                                <div class="box-text-inner blog-post-inner">
+                                                    <h5 class="post-title is-large ">Hiểu Về Phần Cứng Trên Điện Thoại Và Cách Sửa Phần Cứng Điện Thoại</h5>
+                                                    <div class="is-divider"></div>
+                                                    <p class="from_the_blog_excerpt ">Có rất nhiều lý do khiến người dùng phải đi sửa phần cứng điện thoại.... </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col post-item">
+                                <div class="col-inner">
+                                    <a href="#" class="plain">
+                                        <div class="box box-text-bottom box-blog-post has-hover">
+                                            <div class="box-image">
+                                                <div class="image-cover" style="padding-top:56%;">
+                                                    <img width="300" height="169" alt="Thay Màn Hình Điện Thoại Hay Thay Mặt Kính – Hiểu Để Chọn Đúng" src="img/thay-man-hinh-dien-thoai-300x186.jpg">
+                                                </div>
+                                            </div>
+                                            <div class="box-text text-left">
+                                                <div class="box-text-inner blog-post-inner">
+                                                    <h5 class="post-title is-large ">Thay Màn Hình Điện Thoại Hay Thay Mặt Kính – Hiểu Để Chọn Đúng</h5>
+                                                    <div class="is-divider"></div>
+                                                    <p class="from_the_blog_excerpt ">Mọi người thường băn khoăn rằng mình cần thay màn hình điện thoại hay thay... </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col post-item">
+                                <div class="col-inner">
+                                    <a href="#" class="plain">
+                                        <div class="box box-text-bottom box-blog-post has-hover">
+                                            <div class="box-image">
+                                                <div class="image-cover" style="padding-top:56%;">
+                                                    <img width="300" height="169" alt="Lý Do Điện Thoại Không Lên Nguồn Và Cách Sửa Nguồn Điện Thoại" src="img/sua-nguon-dien-thoai-300x169.jpg">
+                                                </div>
+                                            </div>
+                                            <div class="box-text text-left">
+                                                <div class="box-text-inner blog-post-inner">
+                                                    <h5 class="post-title is-large ">Lý Do Điện Thoại Không Lên Nguồn Và Cách Sửa Nguồn Điện Thoại</h5>
+                                                    <div class="is-divider"></div>
+                                                    <p class="from_the_blog_excerpt ">Khi lỗi nguồn, điện thoại sẽ gặp nhiều lỗi khó chịu và khiến việc sử... </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col post-item">
+                                <div class="col-inner">
+                                    <a href="#" class="plain">
+                                        <div class="box box-text-bottom box-blog-post has-hover">
+                                            <div class="box-image">
+                                                <div class="image-cover" style="padding-top:56%;">
+                                                    <img width="300" height="169" alt="Hướng Dẫn Bạn Cách Cấp Cứu Và Sửa Điện Thoại Bị Vô Nước" src="img/sua-dien-thoai-vo-nuoc-300x152.jpg">
+                                                </div>
+                                            </div>
+                                            <div class="box-text text-left">
+                                                <div class="box-text-inner blog-post-inner">
+                                                    <h5 class="post-title is-large ">Hướng Dẫn Bạn Cách Cấp Cứu Và Sửa Điện Thoại Bị Vô Nước</h5>
+                                                    <div class="is-divider"></div>
+                                                    <p class="from_the_blog_excerpt ">Đánh rơi điện thoại vào nước là một trong những sự cố đáng sợ bậc... </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="page-numbers nav-pagination links text-center">
+                            <li><span aria-current="page" class="page-number current">1</span></li>
+                            <li><a class="page-number" href="#">2</a></li>
+                            <li><a class="page-number" href="#">3</a></li><li><a class="page-number" href="#">4</a></li>
+                            <li><a class="page-number" href="#">5</a></li>
+                            <li><a class="next page-number" href="#"><i class="fas fa-angle-right"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer id="footer" class="footer-wrapper">
+            <section class="section footer">
+                <div class="bg section-bg fill bg-fill bg-loaded"></div>
+                <section class="section-content relative">
+                    <div class="gap-element clearfix gap-element-center"></div>
+                    <div class="row row-small">
+                        <div class="col medium-5 small-12 large-5">
+                            <div class="col-inner">
+                                <div class="content_footer">
+                                    <h4><span style="color:#fff;">THU MUA IPHONE CŨ GIÁ CAO TẠI TPHCM</span></h4>
+                                    <ul class="list-info">
+                                        <li><span style="color:#fff;"><i class="fas fa-map-marker-alt"></i> 6 Nguyễn Bỉnh Khiêm, phường 1, quận Gò Vấp, TP. HCM</span></li>
+                                        <li><span style="color:#fff;"><i class="fas fa-phone-alt"></i> Điện thoại: 0911116997 - 0943354321</span></li>
+                                        <li><span style="color:#fff;"><i class="fas fa-envelope"></i> Email: thumuavn1@gmail.com</span></li>
+                                        <li><span style="color:#fff;"><i class="fas fa-globe-americas"></i> Website: thumuavn.com</span></li>
+                                    </ul>
+                                </div>
+                                <div class="social-icons follow-icons full-width text-left">
+                                    <a href="https://www.facebook.com/tienthumuavn/" target="_blank" data-label="Facebook" rel="noopener noreferrer nofollow" class="icon primary button circle facebook tooltip tooltipstered"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer nofollow" data-label="Instagram" class="icon primary button circle instagram tooltip tooltipstered"><i class="fab fa-instagram"></i></a>
+                                    <a href="#" target="_blank" data-label="Twitter" rel="noopener noreferrer nofollow" class="icon primary button circle twitter tooltip tooltipstered"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer nofollow" data-label="YouTube" class="icon primary button circle youtube tooltip tooltipstered"><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col medium-3 small-12 large-3">
+                            <div class="col-inner">
+                                <h4>CHÍNH SÁCH</h4>
+                                <ul>
+                                    <li><a href="#" target="_blank">Chính sách thanh toán</a></li>
+                                    <li><a href="#" target="_blank">Chính sách trả hàng</a></li>
+                                    <li><a href="#" target="_blank">Chính sách mua hàng</a></li>
+                                    <li><a href="#" target="_blank">Chính sách giao hàng</a></li>
+                                    <li><a href="#" target="_blank">Hỗ trợ khách hàng</a></li>
+                                    <li><a href="#" target="_blank">Liên hệ - Bản đồ</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col medium-4 small-12 large-4">
+                            <div class="col-inner text-right">
+                                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffwdvnam%2F%3Fref%3Dpages_you_manage&tabs=timeline&width=368&height=250&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="390" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <div class="absolute-footer dark medium-text-center text-center">
+                <div class="container clearfix">
+                    <div class="footer-primary pull-left">
+                        <div class="copyright-footer"> Copyright 2021 © <strong>THU MUA DIEN THOAI GIA CAO TPHCM. All right Reserved.</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div id="button-contact-vr">
+        <div id="zalo-vr" class="button-contact">
+            <div class="phone-vr">
+                <div class="phone-vr-circle-fill"></div>
+                <div class="phone-vr-img-circle">
+                    <a target="_blank" href="#"><img src="img/zalo.png" alt="zalo"></a>
+                </div>
+            </div>
+        </div>
+        <div id="phone-vr" class="button-contact">
+            <div class="phone-vr">
+                <div class="phone-vr-circle-fill"></div>
+                <div class="phone-vr-img-circle">
+                    <a href="tel:"><img src="img/phone.png" alt="phone"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+<script src="assets/js/slick.min.js"></script>
+<script src="assets/js/myjs.js"></script>

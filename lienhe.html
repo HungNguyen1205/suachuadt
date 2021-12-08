@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sửa chữa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body>
+    <a id="button" class=""></a>
+    <div id="wrapper">
+        <div class="mfp-bg" id="overplay"></div>
+        <div id="main-menu" class="mobile-sidebar">    
+            <div class="sidebar-menu">
+                <ul class="nav nav-sidebar  nav-vertical nav-uppercase">
+                    <li class="header-search-form search-form html relative has-icon">
+                        <div class="header-search-form-wrapper">
+                            <div class="searchform-wrapper ux-search-box relative is-normal">
+                                <form role="search" method="get" class="searchform" action="">
+                                    <div class="flex-row relative">
+                                        <div class="flex-col flex-grow">
+                                            <label class="screen-reader-text" for="">Tìm kiếm:</label>
+                                            <input type="search" class="search-field mb-0" placeholder="Tìm kiếm…" value="" name="s" autocomplete="off">
+                                            <input type="hidden" name="post_type" value="product">
+                                        </div>
+                                        <div class="flex-col">
+                                            <button type="submit" value="Tìm kiếm" class="ux-search-submit submit-button secondary button icon mb-0"> <i class="fas fa-search"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="live-search-results text-left z-top">
+                                        <div class="autocomplete-suggestions" style="position: absolute; display: none; max-height: 300px; z-index: 9999;"></div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">Trang chủ</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">Giới Thiệu</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">DỊCH VỤ SỬA CHỮA</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">Tin Tức</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">Liên hệ</a></li>
+                </ul>
+            </div>
+            <button title="Close (Esc)" type="button" class="mfp-close" onclick="myFunction()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <header id="header" class="header has-sticky sticky-jumb">
+            <div class="header-wrapper">
+                <div id="masthead" class="header-main">
+                    <div class="header-inner flex-row container logo-left medium-logo-center" role="navigation">
+                        <div id="logo" class="flex-col logo">
+                            <a href="#" rel="home"><img width="200" height="60" src="img/logo.jpg"></a>
+                        </div>
+                        <div class="flex-col show-for-medium flex-left">
+                            <ul class="mobile-nav nav nav-left">
+                                <li class="nav-icon has-icon">
+                                    <div class="header-button">
+                                        <a href="javascript:void(0)" data-open="#main-menu" data-pos="left" data-bg="main-menu-overlay" data-color="" class="icon primary button round is-small" aria-label="Menu" aria-controls="main-menu" aria-expanded="false" onclick="myFunction()"> 
+                                            <i class="fas fa-bars"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex-col hide-for-medium flex-left flex-grow">
+                            <ul class="header-nav header-nav-main nav nav-left nav-uppercase">
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page active">
+                                    <a href="#" class="nav-top-link">Trang chủ</a>   
+                                </li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                    <a href="#" class="nav-top-link">Giới thiệu</a>   
+                                </li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                    <a href="#" class="nav-top-link">Dịch vụ sửa chữa</a>   
+                                </li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                    <a href="#" class="nav-top-link">Tin tức</a>   
+                                </li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                    <a href="#" class="nav-top-link">Liên hệ</a>   
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex-col show-for-medium flex-right"> 
+                            <ul class="mobile-nav nav nav-right "> </ul> 
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="header-bg-container fill">
+                    <div class="header-bg-image fill"></div>
+                    <div class="header-bg-color fill"></div>
+                </div>
+            </div>
+        </header>
+        <main id="main">
+            <div id="content" class="content-area">
+                <div  class="page-header-wrapper">
+                    <div class="page-title dark featured-title">
+                        <div class="page-title-bg">
+                            <div class="title-bg fill bg-fill lazyloaded parallax-active"></div>
+                            <div class="title-overlay fill"></div>
+                        </div>
+                        <div class="page-title-inner container align-center text-center flex-row-col medium-flex-wrap"> <div class="title-wrapper is-large flex-col">
+                            <h1 class="entry-title mb-0"> Liên Hệ Với Chúng Tôi </h1>
+                        </div>
+                        <div class="title-content flex-col">
+                            <div class="title-breadcrumbs pb-half pt-half">
+                                <nav class="woocommerce-breadcrumb breadcrumbs uppercase">
+                                    <a href="https://thumuavn.com">Trang chủ</a>
+                                    <span class="divider">/</span> Liên Hệ
+                                </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <section class="section">
+                    <div class="bg section-bg fill bg-fill bg-loaded"></div>
+                    <div class="section-content relative">
+                        <div class="row row-small">
+                            <div class="col small-12 large-12">
+                                <div class="col-inner">
+                                    <h2 class="title">Liên hệ</h2>
+                                    <img src="img/title.png" alt="">
+                                </div>
+                            </div>
+                            <div class="gap-element clearfix hide-for-small gap-element-center"></div> 
+                        </div>
+                        <div class="row row-small contact-img_box" id="row-327646243">
+                            <div class="col medium-4 small-12 large-4">
+                                <div class="col-inner" style="padding:px 0px 0px 0px;margin:20px 0px 0px 0px;">
+                                    <div class="box has-hover has-hover box-shadow-2 box-default box-text-bottom">
+                                        <div class="box-image" style="width:40%;">
+                                            <div class="image-cover" style="padding-top:100%;">
+                                                <img width="100" height="100" alt="" src="img/dia-chi.jpg">
+                                            </div>
+                                        </div>
+                                        <div class="box-text text-center">
+                                            <div class="box-text-inner">
+                                                <h4>Địa chỉ</h4>
+                                                <p>6 Nguyễn Bỉnh Khiêm, phường 1, quận Gò Vấp, TP. HCM</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col medium-4 small-12 large-4">
+                                <div class="col-inner" style="margin:20px 0px 0px 0px;">
+                                    <div class="box has-hover has-hover box-shadow-2 box-default box-text-bottom">
+                                        <div class="box-image" style="width:40%;">
+                                            <div class="image-cover" style="padding-top:100%;">
+                                                <img width="100" height="100" alt="" src="img/lien-he.png">
+                                            </div>
+                                        </div>
+                                        <div class="box-text text-center">
+                                            <div class="box-text-inner">
+                                                <h4>Liên hệ</h4>
+                                                <p>Điện thoại: 0911116997 – 0943354321</p>
+                                                <p style="text-align:center;">Email:thumuavn1@gmail.com</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col medium-4 small-12 large-4">
+                                <div class="col-inner" style="margin:20px 0px 0px 0px;">
+                                    <div class="box has-hover has-hover box-shadow-2 box-default box-text-bottom">
+                                        <div class="box-image" style="width:40%;">
+                                            <div class="image-cover" style="padding-top:100%;">
+                                                <img width="100" height="100" alt="" src="img/thoi-gian.png">
+                                            </div>
+                                        </div>
+                                        <div class="box-text text-center">
+                                            <div class="box-text-inner">
+                                                <h4>Thời gian làm việc</h4>
+                                                <p><strong>8:00 – 17:00</strong> ( Từ thứ 2 đến thứ 6 )</p> <p><strong>8:00 – 12:00</strong>&nbsp;( Thứ 7 )</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                        <div id="gap-582927404" class="gap-element clearfix hide-for-small gap-element-center"></div>
+                        <div class="row row-small">
+                            <div class="col form_conact medium-6 small-12 large-6">
+                                <div class="col-inner">
+                                    <div role="form" class="wpcf7" id="wpcf7-f272-p26-o1" lang="vi" dir="ltr">
+                                        <div class="screen-reader-response">
+                                            <p role="status" aria-live="polite" aria-atomic="true"></p>
+                                            <ul></ul>
+                                        </div>
+                                        <form action="" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">
+                                            <div style="display:none;">
+                                                <input type="hidden" name="_wpcf7" value="272">
+                                                <input type="hidden" name="_wpcf7_version" value="5.4">
+                                                <input type="hidden" name="_wpcf7_locale" value="vi">
+                                                <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f272-p26-o1"> <input type="hidden" name="_wpcf7_container_post" value="26">
+                                                <input type="hidden" name="_wpcf7_posted_data_hash" value="">
+                                            </div>
+                                            <p>
+                                                <span class="wpcf7-form-control-wrap text-322">
+                                                    <input type="text" name="text-322" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Họ và tên"></span><br>
+                                                <span class="wpcf7-form-control-wrap email">
+                                                    <input type="email" name="email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Email"></span><br>
+                                                <span class="wpcf7-form-control-wrap tel">
+                                                     <input type="tel" name="tel" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" aria-invalid="false" placeholder="Số điện thoại"></span><br>
+                                                <span class="wpcf7-form-control-wrap textarea-90"><textarea name="textarea-90" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Nội dung"></textarea></span><br>
+                                                    <input type="submit" value="Gửi" class="wpcf7-form-control wpcf7-submit" aria-invalid="false"><span class="ajax-loader"></span>
+                                            </p>
+                                            <div class="wpcf7-response-output" aria-hidden="true"></div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col medium-6 small-12 large-6">
+                                <div class="col-inner">
+                                    <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.5481692417134!2d106.67853961386734!3d10.769263292326379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f21c29c3c8f%3A0x40b75803fff4300e!2zNTEvNTQgQ2FvIFRo4bqvbmcsIFBoxrDhu51uZyAzLCBRdeG6rW4gMywgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1638895809640!5m2!1svi!2s" width="100%" height="320" style="border:0; margin-top: 20px;" allowfullscreen="" loading="lazy"></iframe></p>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer id="footer" class="footer-wrapper">
+            <section class="section footer">
+                <div class="bg section-bg fill bg-fill bg-loaded"></div>
+                <section class="section-content relative">
+                    <div class="gap-element clearfix gap-element-center"></div>
+                    <div class="row row-small">
+                        <div class="col medium-5 small-12 large-5">
+                            <div class="col-inner">
+                                <div class="content_footer">
+                                    <h4><span style="color:#fff;">THU MUA IPHONE CŨ GIÁ CAO TẠI TPHCM</span></h4>
+                                    <ul class="list-info">
+                                        <li><span style="color:#fff;"><i class="fas fa-map-marker-alt"></i> 6 Nguyễn Bỉnh Khiêm, phường 1, quận Gò Vấp, TP. HCM</span></li>
+                                        <li><span style="color:#fff;"><i class="fas fa-phone-alt"></i> Điện thoại: 0911116997 - 0943354321</span></li>
+                                        <li><span style="color:#fff;"><i class="fas fa-envelope"></i> Email: thumuavn1@gmail.com</span></li>
+                                        <li><span style="color:#fff;"><i class="fas fa-globe-americas"></i> Website: thumuavn.com</span></li>
+                                    </ul>
+                                </div>
+                                <div class="social-icons follow-icons full-width text-left">
+                                    <a href="https://www.facebook.com/tienthumuavn/" target="_blank" data-label="Facebook" rel="noopener noreferrer nofollow" class="icon primary button circle facebook tooltip tooltipstered"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer nofollow" data-label="Instagram" class="icon primary button circle instagram tooltip tooltipstered"><i class="fab fa-instagram"></i></a>
+                                    <a href="#" target="_blank" data-label="Twitter" rel="noopener noreferrer nofollow" class="icon primary button circle twitter tooltip tooltipstered"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer nofollow" data-label="YouTube" class="icon primary button circle youtube tooltip tooltipstered"><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col medium-3 small-12 large-3">
+                            <div class="col-inner">
+                                <h4>CHÍNH SÁCH</h4>
+                                <ul>
+                                    <li><a href="#" target="_blank">Chính sách thanh toán</a></li>
+                                    <li><a href="#" target="_blank">Chính sách trả hàng</a></li>
+                                    <li><a href="#" target="_blank">Chính sách mua hàng</a></li>
+                                    <li><a href="#" target="_blank">Chính sách giao hàng</a></li>
+                                    <li><a href="#" target="_blank">Hỗ trợ khách hàng</a></li>
+                                    <li><a href="#" target="_blank">Liên hệ - Bản đồ</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col medium-4 small-12 large-4">
+                            <div class="col-inner text-right">
+                                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffwdvnam%2F%3Fref%3Dpages_you_manage&tabs=timeline&width=368&height=250&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="390" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <div class="absolute-footer dark medium-text-center text-center">
+                <div class="container clearfix">
+                    <div class="footer-primary pull-left">
+                        <div class="copyright-footer"> Copyright 2021 © <strong>THU MUA DIEN THOAI GIA CAO TPHCM. All right Reserved.</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div id="button-contact-vr">
+        <div id="zalo-vr" class="button-contact">
+            <div class="phone-vr">
+                <div class="phone-vr-circle-fill"></div>
+                <div class="phone-vr-img-circle">
+                    <a target="_blank" href="#"><img src="img/zalo.png" alt="zalo"></a>
+                </div>
+            </div>
+        </div>
+        <div id="phone-vr" class="button-contact">
+            <div class="phone-vr">
+                <div class="phone-vr-circle-fill"></div>
+                <div class="phone-vr-img-circle">
+                    <a href="tel:"><img src="img/phone.png" alt="phone"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+<script src="assets/js/slick.min.js"></script>
+<script src="assets/js/myjs.js"></script>

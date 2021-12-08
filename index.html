@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sửa chữa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body>
+    <a id="button" class=""></a>
+    <div id="wrapper">
+        <div class="mfp-bg" id="overplay"></div>
+        <div id="main-menu" class="mobile-sidebar">    
+            <div class="sidebar-menu">
+                <ul class="nav nav-sidebar  nav-vertical nav-uppercase">
+                    <li class="header-search-form search-form html relative has-icon">
+                        <div class="header-search-form-wrapper">
+                            <div class="searchform-wrapper ux-search-box relative is-normal">
+                                <form role="search" method="get" class="searchform" action="">
+                                    <div class="flex-row relative">
+                                        <div class="flex-col flex-grow">
+                                            <label class="screen-reader-text" for="">Tìm kiếm:</label>
+                                            <input type="search" class="search-field mb-0" placeholder="Tìm kiếm…" value="" name="s" autocomplete="off">
+                                            <input type="hidden" name="post_type" value="product">
+                                        </div>
+                                        <div class="flex-col">
+                                            <button type="submit" value="Tìm kiếm" class="ux-search-submit submit-button secondary button icon mb-0"> <i class="fas fa-search"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="live-search-results text-left z-top">
+                                        <div class="autocomplete-suggestions" style="position: absolute; display: none; max-height: 300px; z-index: 9999;"></div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">Trang chủ</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">Giới Thiệu</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">DỊCH VỤ SỬA CHỮA</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">Tin Tức</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">Liên hệ</a></li>
+                </ul>
+            </div>
+            <button title="Close (Esc)" type="button" class="mfp-close" onclick="myFunction()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <header id="header" class="header has-sticky sticky-jumb">
+            <div class="header-wrapper">
+                <div id="masthead" class="header-main">
+                    <div class="header-inner flex-row container logo-left medium-logo-center" role="navigation">
+                        <div id="logo" class="flex-col logo">
+                            <a href="#" rel="home"><img width="200" height="60" src="img/logo.jpg"></a>
+                        </div>
+                        <div class="flex-col show-for-medium flex-left">
+                            <ul class="mobile-nav nav nav-left">
+                                <li class="nav-icon has-icon">
+                                    <div class="header-button">
+                                        <a href="javascript:void(0)" data-open="#main-menu" data-pos="left" data-bg="main-menu-overlay" data-color="" class="icon primary button round is-small" aria-label="Menu" aria-controls="main-menu" aria-expanded="false" onclick="myFunction()"> 
+                                            <i class="fas fa-bars"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex-col hide-for-medium flex-left flex-grow">
+                            <ul class="header-nav header-nav-main nav nav-left nav-uppercase">
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page active">
+                                    <a href="#" class="nav-top-link">Trang chủ</a>   
+                                </li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                    <a href="#" class="nav-top-link">Giới thiệu</a>   
+                                </li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                    <a href="#" class="nav-top-link">Dịch vụ sửa chữa</a>   
+                                </li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                    <a href="#" class="nav-top-link">Tin tức</a>   
+                                </li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                    <a href="#" class="nav-top-link">Liên hệ</a>   
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex-col show-for-medium flex-right"> 
+                            <ul class="mobile-nav nav nav-right "> </ul> 
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="header-bg-container fill">
+                    <div class="header-bg-image fill"></div>
+                    <div class="header-bg-color fill"></div>
+                </div>
+            </div>
+        </header>
+        <main id="main">
+            <div id="content" class="content-area">
+                <section class="section section-top-banner">
+                    <div class="bg section-bg fill bg-fill bg-loaded"></div>
+                    <div class="section-content relative slick-fade">
+                        <div class="top-banner">
+                            <img class="image-top-banner" src="img/baner.png" alt="" width="1366" height="507">   
+                        </div>
+                        <div class="top-banner">
+                            <img class="image-top-banner" src="img/baner-2.png" alt="" width="1366" height="507">   
+                        </div>
+                    </div>
+                </section>
+                <section class="section">
+                    <div class="bg section-bg fill bg-fill bg-loaded"></div>
+                    <div class="section-content relative">
+                        <div class="row row-small hide-for-small why-choose-us">
+                            <div class="col small-12 large-12">
+                                <div class="col-inner">
+                                    <h2 class="title"> Tại sao chọn chúng tôi</h2>
+                                    <img src="img/title.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col medium-4 small-12 large-4">
+                                <div class="col-inner">
+                                    <div class="gap-element clearfix hide-for-small gap-element-top">
+                                    </div>
+                                    <div class="row row-small box-text-img">
+                                        <div class="col medium-8 small-12 large-8">
+                                            <div class="col-inner text-right">
+                                                <div class="box-text">
+                                                    <h5 style="text-align:left;">DỊCH VỤ SỬA CHỮA</h5>
+                                                    <p style="text-align:left;">Luôn đảm bảo 100% làm việc  sẽ mang lại hiệu quả sửa chữa tốt nhất cho thiết bịcủa bạn, vậy nên một khi đã lựa chọn</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col medium-4 small-12 large-4">
+                                            <div class="col-inner text-right">
+                                                <div class="box-why">
+                                                    <img src="img/check-1.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gap-element clearfix gap-element-bot"></div>
+                                    <div class="row row-small box-text-img">
+                                        <div class="col medium-8 small-12 large-8">
+                                            <div class="col-inner text-right">
+                                                <div class="box-text">
+                                                    <h5 style="text-align:left;">TIẾT KIỆM TỐI ƯU</h5>
+                                                    <p style="text-align:left;">-Sửa lấy ngay, không giữ máy khách đối với những bệnh đơn giản.</p>
+                                                    <p style="text-align:left;">-Khách hàng được quan sát quá trình kĩ thuật sửa chữa qua camera.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col medium-4 small-12 large-4">
+                                            <div class="col-inner text-right">
+                                                <div class="box-why">
+                                                    <img src="img/calendar.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col medium-4 small-12 large-4">
+                                <div class="col-inner text-center">
+                                    <div class="img has-hover x md-x lg-x y md-y lg-y img-center">
+                                        <div class="img-inner dark">
+                                            <img src="img/iphone.png" alt="" width="236" height="412">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col medium-4 small-12 large-4">
+                                <div class="col-inner">
+                                    <div class="gap-element clearfix hide-for-small gap-element-top">
+                                    </div>
+                                    <div class="row row-small box-text-img">
+                                        <div class="col medium-4 small-12 large-4">
+                                            <div class="col-inner text-left">
+                                                <div class="box-why">
+                                                    <img src="img/unnamed-file.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col medium-8 small-12 large-8">
+                                            <div class="col-inner text-left">
+                                                <div class="box-text">
+                                                    <h5 style="text-align:left;">CAM KẾT GIÁ TỐT</h5>
+                                                    <p style="text-align:left;">Tất cả linh phụ kiện thay thế đều là hàng zin, chính hãng.Quy trình làm việc rõ ràng, nghiêm túc.Bảo hành theo đúng những gì công ty đã cam kết.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gap-element clearfix gap-element-bot"></div>
+                                    <div class="row row-small box-text-img">
+                                        <div class="col medium-4 small-12 large-4">
+                                            <div class="col-inner text-left">
+                                                <div class="box-why">
+                                                    <img src="img/tay-1.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col medium-8 small-12 large-8">
+                                            <div class="col-inner text-left">
+                                                <div class="box-text">
+                                                    <h5 style="text-align:left;">NHANH CHÓNG, TIN CẬY</h5>
+                                                    <p style="text-align:left;">“Với phương châm luôn đi đầu về công nghệ” ThumuaVN đã đầu tư máy móc tân tiến nhất</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-small show-for-small why-choose-us">
+                            <div class="col small-12 large-12">
+                                <div class="col-inner">
+                                    <h2 class="title">Tại sao chọn chúng tôi</h2>
+                                    <img src="img/title.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col medium-4 small-12 large-4">
+                                <div class="col-inner">
+                                    <div class="row row-collapse box-text-img">
+                                        <div class="col medium-8 small-8 large-8">
+                                            <div class="col-inner text-right">
+                                                <div class="box-text">
+                                                    <h5 style="text-align:left;">DỊCH VỤ SỬA CHỮA</h5>
+                                                    <p style="text-align:left;">Trước áp lực cạnh tranh và những biến động của nền kinh tế toàn cầu, việc lèo lái con thuyền</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col medium-4 small-4 large-4">
+                                            <div class="col-inner text-left">
+                                                <div class="box-why">
+                                                    <img src="img/check-1.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row row-collapse box-text-img">
+                                        <div class="col medium-8 small-8 large-8">
+                                            <div class="col-inner text-right">
+                                                <div class="box-text">
+                                                    <h5 style="text-align:left;">TIẾT KIỆM TỐI ƯU</h5>
+                                                    <p style="text-align:left;">Trước áp lực cạnh tranh và những biến động của nền kinh tế toàn cầu, việc lèo lái con thuyền</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col medium-4 small-4 large-4">
+                                            <div class="col-inner text-left">
+                                                <div class="box-why">
+                                                    <img src="img/calendar.png">
+                                                </div>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col medium-4 small-12 large-4">
+                                <div class="col-inner">
+                                    <div class="row row-collapse box-text-img">
+                                        <div class="col medium-8 small-8 large-8">
+                                            <div class="col-inner text-right">
+                                                <div class="box-text">
+                                                    <h5 style="text-align:left;">CAM KẾT GIÁ TỐT</h5>
+                                                    <p style="text-align:left;">Trước áp lực cạnh tranh và những biến động của nền kinh tế toàn cầu, việc lèo lái con thuyền</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col medium-4 small-4 large-4">
+                                            <div class="col-inner text-left">
+                                                <div class="box-why">
+                                                    <img src="img/unnamed-file.png">
+                                                </div>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                    <div class="row row-collapse box-text-img">
+                                        <div class="col medium-8 small-8 large-8">
+                                            <div class="col-inner text-right">
+                                                <div class="box-text">
+                                                    <h5 style="text-align:left;">NHANH CHÓNG, TIN CẬY</h5>
+                                                    <p style="text-align:left;">Trước áp lực cạnh tranh và những biến động của nền kinh tế toàn cầu, việc lèo lái con thuyền</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col medium-4 small-4 large-4">
+                                            <div class="col-inner text-left">
+                                                <div class="box-why">
+                                                    <img src="img/tay-1.png">
+                                                </div>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>    
+                        <div class="img has-hover hide-for-small x md-x lg-x y md-y lg-y">
+                            <div class="img-inner dark">
+                                <img width="1366" height="316" src="img/baner-3.png">
+                            </div> 
+                        </div>
+                        <div class="gap-element clearfix hide-for-small gap-element-center"></div>
+                        <div class="row repair-service">
+                            <div class="col small-12 large-12">
+                                <div class="col-inner">
+                                    <h2 class="title">Dịch vụ sửa chữa</h2>
+                                    <img src="img/title.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col small-12 large-12">
+                                <div class="col-inner text-center my-slick-responsive row blog-post large-columns-3 medium-columns-1 small-columns-1 has-shadow row-box-shadow-3 row-box-shadow-1-hover">
+                                    <div class="col post-item">
+                                        <div class="col-inner">
+                                            <a href="#" class="plain">
+                                                <div class="box box-default box-text-bottom box-blog-post has-hover">
+                                                    <div class="box-image">
+                                                        <div class="image-zoom image-zoom image-cover" style="padding-top:75%;">
+                                                            <img src="img/sua-dien-thoai-sony.jpg" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="box-text text-center">
+                                                        <div class="box-text-inner blog-post-inner">
+                                                            <h5 class="post-title is-large ">Dịch Vụ Sửa Điện Thoại Sony – Linh Kiện Chính Hãng – KTV Lành Nghề</h5>
+                                                            <div class="is-divider"></div>
+                                                            <p class="from_the_blog_excerpt ">Sony là thương hiệu điện thoại chất lượng cao với màn hình điện thoại sắc nét. Chính vì vậy, nó đặc biệt được yêu thích, là... </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col post-item">
+                                        <div class="col-inner">
+                                            <a href="#" class="plain">
+                                                <div class="box box-default box-text-bottom box-blog-post has-hover">
+                                                    <div class="box-image">
+                                                        <div class="image-zoom image-zoom image-cover" style="padding-top:75%;">
+                                                            <img src="img/thay-pin-dien-thoai-13.jpg" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="box-text text-center">
+                                                        <div class="box-text-inner blog-post-inner">
+                                                            <h5 class="post-title is-large ">Dấu Hiệu Cần Thay Pin Điện Thoại Và Hướng Dẫn Sử Dụng Pin Đúng Cách</h5>
+                                                            <div class="is-divider"></div>
+                                                            <p class="from_the_blog_excerpt ">Pin là linh kiện tiêu hao. Chính vì vậy sau một thời gian sử dụng thì việc thay pin điện thoại là cần thiết. Vậy đâu... </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col post-item">
+                                        <div class="col-inner">
+                                            <a href="#" class="plain">
+                                                <div class="box box-default box-text-bottom box-blog-post has-hover">
+                                                    <div class="box-image">
+                                                        <div class="image-zoom image-zoom image-cover" style="padding-top:75%;">
+                                                            <img src="img/sua-phan-cung-dien-thoai.jpg" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="box-text text-center">
+                                                        <div class="box-text-inner blog-post-inner">
+                                                            <h5 class="post-title is-large ">Hiểu Về Phần Cứng Trên Điện Thoại Và Cách Sửa Phần Cứng Điện Thoại</h5>
+                                                            <div class="is-divider"></div>
+                                                            <p class="from_the_blog_excerpt ">Có rất nhiều lý do khiến người dùng phải đi sửa phần cứng điện thoại. Tùy từng lỗi mà việc sửa chữa có thể mất nhiều... </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col post-item">
+                                        <div class="col-inner">
+                                            <a href="#" class="plain">
+                                                <div class="box box-default box-text-bottom box-blog-post has-hover">
+                                                    <div class="box-image">
+                                                        <div class="image-zoom image-zoom image-cover" style="padding-top:75%;">
+                                                            <img src="img/thay-man-hinh-dien-thoai.jpg" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="box-text text-center">
+                                                        <div class="box-text-inner blog-post-inner">
+                                                            <h5 class="post-title is-large ">Thay Màn Hình Điện Thoại Hay Thay Mặt Kính – Hiểu Để Chọn Đúng</h5>
+                                                            <div class="is-divider"></div>
+                                                            <p class="from_the_blog_excerpt ">Mọi người thường băn khoăn rằng mình cần thay màn hình điện thoại hay thay mặt kính. Khi thấy màn hình hiển thị có vấn đề,... </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col post-item">
+                                        <div class="col-inner">
+                                            <a href="#" class="plain">
+                                                <div class="box box-default box-text-bottom box-blog-post has-hover">
+                                                    <div class="box-image">
+                                                        <div class="image-zoom image-zoom image-cover" style="padding-top:75%;">
+                                                            <img src="img/sua-nguon-dien-thoai.jpg" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="box-text text-center">
+                                                        <div class="box-text-inner blog-post-inner">
+                                                            <h5 class="post-title is-large ">Lý Do Điện Thoại Không Lên Nguồn Và Cách Sửa Nguồn Điện Thoại</h5>
+                                                            <div class="is-divider"></div>
+                                                            <p class="from_the_blog_excerpt ">Khi lỗi nguồn, điện thoại sẽ gặp nhiều lỗi khó chịu và khiến việc sử dụng bị gián đoạn. Lúc này, người dùng sẽ bị lỡ... </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col post-item">
+                                        <div class="col-inner">
+                                            <a href="#" class="plain">
+                                                <div class="box box-default box-text-bottom box-blog-post has-hover">
+                                                    <div class="box-image">
+                                                        <div class="image-zoom image-zoom image-cover" style="padding-top:75%;">
+                                                            <img src="img/sua-dien-thoai-vo-nuoc.jpg" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="box-text text-center">
+                                                        <div class="box-text-inner blog-post-inner">
+                                                            <h5 class="post-title is-large ">Hướng Dẫn Bạn Cách Cấp Cứu Và Sửa Điện Thoại Bị Vô Nước</h5>
+                                                            <div class="is-divider"></div>
+                                                            <p class="from_the_blog_excerpt ">Đánh rơi điện thoại vào nước là một trong những sự cố đáng sợ bậc nhất đối với người dùng Smartphone. Vậy điện thoại bị vô... </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row customer-review">
+                            <div class="col small-12 large-12">
+                                <div class="col-inner">
+                                    <h2 class="title">ý kiến khách hàng</h2>
+                                    <img src="img/title.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col small-12 large-12">
+                                <div class="col-inner my-slick-customer-review">
+                                    <div class="col customer-review-item">
+                                        <div class="col-inner box-shadow-3 box-shadow-2-hover" style="padding:10px 10px 10px 20px;">
+                                            <div class="icon-box featured-box opinion-user icon-box-left text-left is-small">
+                                                <div class="icon-box-img" style="width:140px;">
+                                                    <div class="icon">
+                                                        <div class="icon-inner">
+                                                            <img width="152" height="152" alt="" src="img/user-1.png">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="icon-box-text last-reset">
+                                                    <div class="opinion-ttile">
+                                                        <h3>Trần Mỹ Ngọc</h3>
+                                                        <p>&nbsp;</p>
+                                                    </div>
+                                                    <div class="adress-text">Gò Vấp&nbsp;– HCM</div>
+                                                    <p>Tôi rất thích sử dụng Iphone&nbsp;, mỗi lần Apple ra sản phẩm mới tôi đều chọn Thumuavn.com để gửi gắm niềm tin . Sản phẩm được mua ở đây sử dụng rất tốt.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col customer-review-item">
+                                        <div class="col-inner box-shadow-3 box-shadow-2-hover" style="padding:10px 10px 10px 20px;">
+                                            <div class="icon-box featured-box opinion-user icon-box-left text-left is-small">
+                                                <div class="icon-box-img" style="width:140px;">
+                                                    <div class="icon">
+                                                        <div class="icon-inner">
+                                                            <img width="152" height="152" alt="" src="img/user-2.png">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="icon-box-text last-reset">
+                                                    <div class="opinion-ttile">
+                                                        <h3>Trần Mỹ Ngọc</h3>
+                                                        <p>&nbsp;</p>
+                                                    </div>
+                                                    <div class="adress-text">Gò Vấp&nbsp;– HCM</div>
+                                                    <p>Tôi rất thích sử dụng Iphone&nbsp;, mỗi lần Apple ra sản phẩm mới tôi đều chọn Thumuavn.com để gửi gắm niềm tin . Sản phẩm được mua ở đây sử dụng rất tốt.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col customer-review-item">
+                                        <div class="col-inner box-shadow-3 box-shadow-2-hover" style="padding:10px 10px 10px 20px;">
+                                            <div class="icon-box featured-box opinion-user icon-box-left text-left is-small">
+                                                <div class="icon-box-img" style="width:140px;">
+                                                    <div class="icon">
+                                                        <div class="icon-inner">
+                                                            <img width="152" height="152" alt="" src="img/user-1.png">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="icon-box-text last-reset">
+                                                    <div class="opinion-ttile">
+                                                        <h3>Trần Mỹ Ngọc</h3>
+                                                        <p>&nbsp;</p>
+                                                    </div>
+                                                    <div class="adress-text">Gò Vấp&nbsp;– HCM</div>
+                                                    <p>Tôi rất thích sử dụng Iphone&nbsp;, mỗi lần Apple ra sản phẩm mới tôi đều chọn Thumuavn.com để gửi gắm niềm tin . Sản phẩm được mua ở đây sử dụng rất tốt.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col customer-review-item">
+                                        <div class="col-inner box-shadow-3 box-shadow-2-hover" style="padding:10px 10px 10px 20px;">
+                                            <div class="icon-box featured-box opinion-user icon-box-left text-left is-small">
+                                                <div class="icon-box-img" style="width:140px;">
+                                                    <div class="icon">
+                                                        <div class="icon-inner">
+                                                            <img width="152" height="152" alt="" src="img/user-2.png">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="icon-box-text last-reset">
+                                                    <div class="opinion-ttile">
+                                                        <h3>Trần Mỹ Ngọc</h3>
+                                                        <p>&nbsp;</p>
+                                                    </div>
+                                                    <div class="adress-text">Gò Vấp&nbsp;– HCM</div>
+                                                    <p>Tôi rất thích sử dụng Iphone&nbsp;, mỗi lần Apple ra sản phẩm mới tôi đều chọn Thumuavn.com để gửi gắm niềm tin . Sản phẩm được mua ở đây sử dụng rất tốt.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col customer-review-item">
+                                        <div class="col-inner box-shadow-3 box-shadow-2-hover" style="padding:10px 10px 10px 20px;">
+                                            <div class="icon-box featured-box opinion-user icon-box-left text-left is-small">
+                                                <div class="icon-box-img" style="width:140px;">
+                                                    <div class="icon">
+                                                        <div class="icon-inner">
+                                                            <img width="152" height="152" alt="" src="img/user-1.png">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="icon-box-text last-reset">
+                                                    <div class="opinion-ttile">
+                                                        <h3>Trần Mỹ Ngọc</h3>
+                                                        <p>&nbsp;</p>
+                                                    </div>
+                                                    <div class="adress-text">Gò Vấp&nbsp;– HCM</div>
+                                                    <p>Tôi rất thích sử dụng Iphone&nbsp;, mỗi lần Apple ra sản phẩm mới tôi đều chọn Thumuavn.com để gửi gắm niềm tin . Sản phẩm được mua ở đây sử dụng rất tốt.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col customer-review-item">
+                                        <div class="col-inner box-shadow-3 box-shadow-2-hover" style="padding:10px 10px 10px 20px;">
+                                            <div class="icon-box featured-box opinion-user icon-box-left text-left is-small">
+                                                <div class="icon-box-img" style="width:140px;">
+                                                    <div class="icon">
+                                                        <div class="icon-inner">
+                                                            <img width="152" height="152" alt="" src="img/user-2.png">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="icon-box-text last-reset">
+                                                    <div class="opinion-ttile">
+                                                        <h3>Trần Mỹ Ngọc</h3>
+                                                        <p>&nbsp;</p>
+                                                    </div>
+                                                    <div class="adress-text">Gò Vấp&nbsp;– HCM</div>
+                                                    <p>Tôi rất thích sử dụng Iphone&nbsp;, mỗi lần Apple ra sản phẩm mới tôi đều chọn Thumuavn.com để gửi gắm niềm tin . Sản phẩm được mua ở đây sử dụng rất tốt.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer id="footer" class="footer-wrapper">
+            <section class="section footer">
+                <div class="bg section-bg fill bg-fill bg-loaded"></div>
+                <section class="section-content relative">
+                    <div class="gap-element clearfix gap-element-center"></div>
+                    <div class="row row-small">
+                        <div class="col medium-5 small-12 large-5">
+                            <div class="col-inner">
+                                <div class="content_footer">
+                                    <h4><span style="color:#fff;">THU MUA IPHONE CŨ GIÁ CAO TẠI TPHCM</span></h4>
+                                    <ul class="list-info">
+                                        <li><span style="color:#fff;"><i class="fas fa-map-marker-alt"></i> 6 Nguyễn Bỉnh Khiêm, phường 1, quận Gò Vấp, TP. HCM</span></li>
+                                        <li><span style="color:#fff;"><i class="fas fa-phone-alt"></i> Điện thoại: 0911116997 - 0943354321</span></li>
+                                        <li><span style="color:#fff;"><i class="fas fa-envelope"></i> Email: thumuavn1@gmail.com</span></li>
+                                        <li><span style="color:#fff;"><i class="fas fa-globe-americas"></i> Website: thumuavn.com</span></li>
+                                    </ul>
+                                </div>
+                                <div class="social-icons follow-icons full-width text-left">
+                                    <a href="https://www.facebook.com/tienthumuavn/" target="_blank" data-label="Facebook" rel="noopener noreferrer nofollow" class="icon primary button circle facebook tooltip tooltipstered"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer nofollow" data-label="Instagram" class="icon primary button circle instagram tooltip tooltipstered"><i class="fab fa-instagram"></i></a>
+                                    <a href="#" target="_blank" data-label="Twitter" rel="noopener noreferrer nofollow" class="icon primary button circle twitter tooltip tooltipstered"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer nofollow" data-label="YouTube" class="icon primary button circle youtube tooltip tooltipstered"><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col medium-3 small-12 large-3">
+                            <div class="col-inner">
+                                <h4>CHÍNH SÁCH</h4>
+                                <ul>
+                                    <li><a href="#" target="_blank">Chính sách thanh toán</a></li>
+                                    <li><a href="#" target="_blank">Chính sách trả hàng</a></li>
+                                    <li><a href="#" target="_blank">Chính sách mua hàng</a></li>
+                                    <li><a href="#" target="_blank">Chính sách giao hàng</a></li>
+                                    <li><a href="#" target="_blank">Hỗ trợ khách hàng</a></li>
+                                    <li><a href="#" target="_blank">Liên hệ - Bản đồ</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col medium-4 small-12 large-4">
+                            <div class="col-inner text-right">
+                                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffwdvnam%2F%3Fref%3Dpages_you_manage&tabs=timeline&width=368&height=250&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="390" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <div class="absolute-footer dark medium-text-center text-center">
+                <div class="container clearfix">
+                    <div class="footer-primary pull-left">
+                        <div class="copyright-footer"> Copyright 2021 © <strong>THU MUA DIEN THOAI GIA CAO TPHCM. All right Reserved.</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div id="button-contact-vr">
+        <div id="zalo-vr" class="button-contact">
+            <div class="phone-vr">
+                <div class="phone-vr-circle-fill"></div>
+                <div class="phone-vr-img-circle">
+                    <a target="_blank" href="#"><img src="img/zalo.png" alt="zalo"></a>
+                </div>
+            </div>
+        </div>
+        <div id="phone-vr" class="button-contact">
+            <div class="phone-vr">
+                <div class="phone-vr-circle-fill"></div>
+                <div class="phone-vr-img-circle">
+                    <a href="tel:"><img src="img/phone.png" alt="phone"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+<script src="assets/js/slick.min.js"></script>
+<script src="assets/js/myjs.js"></script>
